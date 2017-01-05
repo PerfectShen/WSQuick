@@ -10,22 +10,55 @@
 
 @implementation WSTableViewCellData
 
+@end
 
+
+
+
+@interface WSTableViewCell ()
+
+@property (nonatomic,strong) CALayer *aSeperateLine; //cell的分割线
 
 @end
 
 
 @implementation WSTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self setupSubViews];
+        [self _addSeperateLine];
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+#pragma mark - Config UI
+- (void)_addSeperateLine{
+    [self.contentView.layer addSublayer:self.aSeperateLine];
 }
+
+
+#pragma mark - over write function
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.aSeperateLine.frame = CGRectMake(0, 0, 0, 0);
+}
+
+
+#pragma mark - public function
+- (void)setupSubViews{
+  
+}
+
++ (CGFloat )cellHeightWithCellData:(WSTableViewCellData *)cellData{
+
+    return cellData.cellHeight;
+}
+
+- (void)updateCellWithCellData:(WSTableViewCellData *)cellData{
+    self.cellData = cellData;
+}
+
 
 @end

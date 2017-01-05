@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WSTableViewController : UIViewController
+@interface WSTableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
 
 @end
