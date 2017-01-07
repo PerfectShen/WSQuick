@@ -16,6 +16,8 @@
 		DB5879421E1608DD006A3556 /* WSQuickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5879411E1608DD006A3556 /* WSQuickTests.m */; };
 		DB5879541E160A21006A3556 /* WSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5879531E160A21006A3556 /* WSTableViewCell.m */; };
 		DB5879581E160A70006A3556 /* WSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5879571E160A70006A3556 /* WSTableViewController.m */; };
+		DBB4295F1E208FDE001918AE /* WSSectionData.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB4295E1E208FDE001918AE /* WSSectionData.m */; };
+		DBB429621E209761001918AE /* WSTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB429611E209761001918AE /* WSTableDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		DB5879531E160A21006A3556 /* WSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCell.m; sourceTree = "<group>"; };
 		DB5879561E160A70006A3556 /* WSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableViewController.h; sourceTree = "<group>"; };
 		DB5879571E160A70006A3556 /* WSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewController.m; sourceTree = "<group>"; };
+		DBB4295D1E208FDE001918AE /* WSSectionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSectionData.h; sourceTree = "<group>"; };
+		DBB4295E1E208FDE001918AE /* WSSectionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSectionData.m; sourceTree = "<group>"; };
+		DBB429601E209761001918AE /* WSTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableDataSource.h; sourceTree = "<group>"; };
+		DBB429611E209761001918AE /* WSTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		DB58794C1E160990006A3556 /* WSQuick */ = {
 			isa = PBXGroup;
 			children = (
+				DBB4295C1E208FC8001918AE /* ViewModel */,
 				DB5879551E160A70006A3556 /* Controller */,
 				DB58794E1E1609B1006A3556 /* View */,
 			);
@@ -143,6 +150,17 @@
 				DB5879571E160A70006A3556 /* WSTableViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DBB4295C1E208FC8001918AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DBB4295D1E208FDE001918AE /* WSSectionData.h */,
+				DBB4295E1E208FDE001918AE /* WSSectionData.m */,
+				DBB429601E209761001918AE /* WSTableDataSource.h */,
+				DBB429611E209761001918AE /* WSTableDataSource.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,10 +266,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB58792F1E1608DD006A3556 /* ViewController.m in Sources */,
+				DBB4295F1E208FDE001918AE /* WSSectionData.m in Sources */,
 				DB5879581E160A70006A3556 /* WSTableViewController.m in Sources */,
 				DB58792C1E1608DD006A3556 /* AppDelegate.m in Sources */,
 				DB5879291E1608DD006A3556 /* main.m in Sources */,
 				DB5879541E160A21006A3556 /* WSTableViewCell.m in Sources */,
+				DBB429621E209761001918AE /* WSTableDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

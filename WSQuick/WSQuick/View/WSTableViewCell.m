@@ -10,6 +10,16 @@
 
 @implementation WSTableViewCellData
 
+- (instancetype)init{
+
+    if (self = [super init]) {
+        
+        self.seperateLineLeft = 12;
+        self.cellIdentfier = NSStringFromClass([self class]);
+    }
+    return self;
+}
+
 @end
 
 
@@ -42,7 +52,8 @@
 #pragma mark - over write function
 - (void)layoutSubviews{
     [super layoutSubviews];
-    self.aSeperateLine.frame = CGRectMake(0, 0, 0, 0);
+    
+    self.aSeperateLine.frame = CGRectMake(self.cellData.seperateLineLeft, self.frame.size.height - 1/ScreenScale , self.frame.size.width - self.cellData.seperateLineLeft, 1/ScreenScale);
 }
 
 
